@@ -18,7 +18,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-3"
+  region     = "eu-west-3"
   access_key = var.access_key
   secret_key = var.secret_key
 }
@@ -73,11 +73,11 @@ resource "aws_security_group" "dos_sg" {
   }
 
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
-    description      = "todo el trafico"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "todo el trafico"
   }
 
   ingress {
@@ -106,18 +106,18 @@ resource "aws_security_group" "dos_sg" {
 }
 
 variable "access_key" {
-  type        = string
+  type = string
 }
 
 variable "secret_key" {
-  type        = string
+  type = string
 }
 
 variable "key_path" {
-  type        = string
+  type = string
 }
 
 variable "key_name" {
-  type        = string
+  type = string
 }
 
